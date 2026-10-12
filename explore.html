@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Explore</title>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav>
+        <a href="index.html">HOME</a> |
+        <a href="vibefind.html">VIBEFIND</a> |
+        
+        <a href="fav.html">FAVOURITES</a> |
+        <a href="plan.html">CREATE PLANS</a> |
+        <a href="login.html">LOGIN</a>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="explore-header">
+
+        <h1>🔍 EXPLORE</h1>
+
+        <p>
+            Discover places for your next hangout.
+        </p>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="explore-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a place..."
+        >
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-container">
+
+            <button class="filter-btn" onclick="filterPlaces('all')">
+                ALL
+            </button>
+
+            <button class="filter-btn" onclick="filterPlaces('food')">
+                🍔 FOOD
+            </button>
+
+            <button class="filter-btn" onclick="filterPlaces('cafe')">
+                ☕ CAFÉ
+            </button>
+
+            <button class="filter-btn" onclick="filterPlaces('movies')">
+                🎬 MOVIES
+            </button>
+
+            <button class="filter-btn" onclick="filterPlaces('gaming')">
+                🎮 GAMING
+            </button>
+
+            <button class="filter-btn" onclick="filterPlaces('outdoors')">
+                🌳 OUTDOORS
+            </button>
+
+            <button class="filter-btn" onclick="filterPlaces('shopping')">
+                🛍️ SHOPPING
+            </button>
+
+        </div>
+
+
+        <!-- PLACE CARDS -->
+
+        <div class="places-container" id="placesContainer">
+
+
+            <!-- PLACE 1 -->
+
+            <div class="place-card" data-category="cafe">
+
+                <div class="place-image">
+                    ☕
+                </div>
+
+                <div class="place-info">
+
+                    <h3>Cozy Corner Café</h3>
+
+                    <p>☕ Café</p>
+
+                    <p>📍 Bandra</p>
+
+                    <p>💰 ₹300 - ₹700</p>
+
+                    <p>
+                        A cozy place to chill and catch up
+                        with friends.
+                    </p>
+
+                    <button class="fav-btn">
+                        ❤️ Add to Favourites
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLACE 2 -->
+
+            <div class="place-card" data-category="food">
+
+                <div class="place-image">
+                    🍔
+                </div>
+
+                <div class="place-info">
+
+                    <h3>Burger House</h3>
+
+                    <p>🍔 Food</p>
+
+                    <p>📍 Andheri</p>
+
+                    <p>💰 ₹300 - ₹700</p>
+
+                    <p>
+                        Burgers, fries and a casual
+                        hangout atmosphere.
+                    </p>
+
+                    <button class="fav-btn">
+                        ❤️ Add to Favourites
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLACE 3 -->
+
+            <div class="place-card" data-category="movies">
+
+                <div class="place-image">
+                    🎬
+                </div>
+
+                <div class="place-info">
+
+                    <h3>Movie Night</h3>
+
+                    <p>🎬 Movies</p>
+
+                    <p>📍 Powai</p>
+
+                    <p>💰 ₹300 - ₹700</p>
+
+                    <p>
+                        Catch the latest movie with
+                        your friends.
+                    </p>
+
+                    <button class="fav-btn">
+                        ❤️ Add to Favourites
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLACE 4 -->
+
+            <div class="place-card" data-category="gaming">
+
+                <div class="place-image">
+                    🎮
+                </div>
+
+                <div class="place-info">
+
+                    <h3>Game Zone</h3>
+
+                    <p>🎮 Gaming</p>
+
+                    <p>📍 Lower Parel</p>
+
+                    <p>💰 ₹700 - ₹1500</p>
+
+                    <p>
+                        Gaming, competitions and
+                        loads of fun.
+                    </p>
+
+                    <button class="fav-btn">
+                        ❤️ Add to Favourites
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLACE 5 -->
+
+            <div class="place-card" data-category="outdoors">
+
+                <div class="place-image">
+                    🌳
+                </div>
+
+                <div class="place-info">
+
+                    <h3>Weekend Park</h3>
+
+                    <p>🌳 Outdoors</p>
+
+                    <p>📍 Malad</p>
+
+                    <p>💰 Under ₹300</p>
+
+                    <p>
+                        Relax, walk around and spend
+                        some time outdoors.
+                    </p>
+
+                    <button class="fav-btn">
+                        ❤️ Add to Favourites
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PLACE 6 -->
+
+            <div class="place-card" data-category="shopping">
+
+                <div class="place-image">
+                    🛍️
+                </div>
+
+                <div class="place-info">
+
+                    <h3>City Mall</h3>
+
+                    <p>🛍️ Shopping</p>
+
+                    <p>📍 Ghatkopar</p>
+
+                    <p>💰 ₹700 - ₹1500</p>
+
+                    <p>
+                        Shopping, food and entertainment
+                        all in one place.
+                    </p>
+
+                    <button class="fav-btn">
+                        ❤️ Add to Favourites
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```

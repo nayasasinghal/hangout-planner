@@ -1,0 +1,1365 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #222;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    background-color: #111827;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    width: 85%;
+    margin: 50px auto;
+    padding: 70px 30px;
+    text-align: center;
+
+    background-color: white;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hero h1 {
+    font-size: 45px;
+    color: #111827;
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    line-height: 1.5;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    margin-top: 35px;
+}
+
+.main-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+    margin: 8px;
+
+    background-color: #111827;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #38bdf8;
+    color: #111827;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+    width: 85%;
+    margin: 50px auto;
+    padding: 45px 30px;
+
+    background-color: white;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+.features > h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #111827;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    min-height: 190px;
+
+    padding: 25px;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    border-color: #38bdf8;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.card p {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   VIBE SECTION
+========================= */
+
+.vibes {
+    width: 85%;
+    margin: 50px auto;
+    padding: 45px 30px;
+
+    background-color: white;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+.vibes > h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #111827;
+}
+
+
+/* =========================
+   VIBE BOXES
+========================= */
+
+.vibe-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.vibe {
+    width: 140px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 18px;
+
+    text-decoration: none;
+    color: #111827;
+
+    font-size: 35px;
+
+    transition: 0.3s;
+}
+
+.vibe span {
+    margin-top: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.vibe:hover {
+    background-color: #111827;
+    color: white;
+
+    transform: scale(1.05);
+
+    border-color: #111827;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    width: 85%;
+    margin: 50px auto;
+
+    padding: 50px 30px;
+
+    background-color: #111827;
+    color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.cta .main-button {
+    background-color: white;
+    color: #111827;
+}
+
+.cta .main-button:hover {
+    background-color: #38bdf8;
+}
+
+
+/* =========================
+   FORM PAGES
+========================= */
+
+h2 {
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    margin: 40px auto;
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+form button {
+    padding: 11px 22px;
+
+    margin-right: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* SUBMIT */
+
+#sub {
+    background-color: #111827;
+    color: white;
+}
+
+#sub:hover {
+    background-color: #38bdf8;
+    color: #111827;
+}
+
+
+/* RESET */
+
+#reset {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+#reset:hover {
+    background-color: #ef4444;
+    color: white;
+}
+/* =========================
+   VIBEFIND PAGE
+========================= */
+
+.vibefind-header {
+    width: 85%;
+    margin: 50px auto 30px;
+    padding: 45px 30px;
+
+    background-color: white;
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.vibefind-header h1 {
+    font-size: 40px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.vibefind-header p {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   FINDER
+========================= */
+
+.finder {
+    width: 85%;
+    margin: 40px auto;
+    padding: 45px 30px;
+
+    background-color: white;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+.finder h2 {
+    font-size: 25px;
+    color: #111827;
+    margin: 30px 0 20px;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.option-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.option {
+    padding: 13px 20px;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.option:hover {
+    background-color: #111827;
+    color: white;
+
+    border-color: #111827;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FIND BUTTON
+========================= */
+
+.find-button-container {
+    margin-top: 20px;
+}
+
+#findBtn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    width: 85%;
+    margin: 40px auto 60px;
+    padding: 35px;
+
+    background-color: #111827;
+    color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    display: none;
+}
+
+.result h2 {
+    margin-bottom: 15px;
+}
+
+.result p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+/* =========================
+   EXPLORE HEADER
+========================= */
+
+.explore-header {
+    width: 85%;
+    margin: 50px auto 30px;
+    padding: 45px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.explore-header h1 {
+    font-size: 40px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.explore-header p {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   EXPLORE SECTION
+========================= */
+
+.explore-section {
+    width: 85%;
+    margin: 40px auto 60px;
+    padding: 40px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+#searchInput {
+    width: 70%;
+    max-width: 600px;
+
+    padding: 14px 18px;
+
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filter-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #111827;
+
+    color: white;
+
+    border-color: #111827;
+}
+
+
+/* =========================
+   PLACES
+========================= */
+
+.places-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   PLACE CARD
+========================= */
+
+.place-card {
+    width: 300px;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.place-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    border-color: #38bdf8;
+}
+
+
+/* =========================
+   PLACE IMAGE
+========================= */
+
+.place-image {
+    height: 150px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #e5e7eb;
+
+    font-size: 60px;
+}
+
+
+/* =========================
+   PLACE INFO
+========================= */
+
+.place-info {
+    padding: 20px;
+}
+
+.place-info h3 {
+    color: #111827;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.place-info p {
+    color: #6b7280;
+
+    line-height: 1.5;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   FAVOURITE BUTTON
+========================= */
+
+.fav-btn {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 12px;
+
+    background-color: #111827;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.fav-btn:hover {
+    background-color: #38bdf8;
+
+    color: #111827;
+}
+/* =========================
+   FAVOURITES HEADER
+========================= */
+
+.fav-header {
+    width: 85%;
+    margin: 50px auto 30px;
+    padding: 45px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.fav-header h1 {
+    font-size: 40px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.fav-header p {
+    font-size: 18px;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   FAVOURITES SECTION
+========================= */
+
+.fav-section {
+    width: 85%;
+
+    margin: 40px auto 60px;
+
+    padding: 40px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+.fav-section > h2 {
+    font-size: 28px;
+
+    color: #111827;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   FAVOURITE CONTAINER
+========================= */
+
+.fav-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   EMPTY FAVOURITES
+========================= */
+
+.empty-fav {
+    width: 500px;
+
+    padding: 45px 30px;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 18px;
+}
+
+.empty-icon {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.empty-fav h3 {
+    font-size: 23px;
+
+    color: #111827;
+
+    margin-bottom: 12px;
+}
+
+.empty-fav p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SAVED PLACE CARD
+========================= */
+
+.saved-card {
+    width: 300px;
+
+    background-color: #f4f7fb;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.saved-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    border-color: #38bdf8;
+}
+
+.saved-image {
+    height: 150px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #e5e7eb;
+
+    font-size: 60px;
+}
+
+.saved-info {
+    padding: 20px;
+}
+
+.saved-info h3 {
+    color: #111827;
+
+    margin-bottom: 12px;
+}
+
+.saved-info p {
+    color: #6b7280;
+
+    line-height: 1.5;
+
+    margin-bottom: 7px;
+}
+
+.remove-fav {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 12px;
+
+    background-color: #ef4444;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.remove-fav:hover {
+    background-color: #dc2626;
+}
+/* =========================
+   PLAN HEADER
+========================= */
+
+.plan-header {
+    width: 85%;
+    margin: 50px auto 30px;
+    padding: 45px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.plan-header h1 {
+    font-size: 40px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.plan-header p {
+    font-size: 18px;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   PLAN SECTION
+========================= */
+
+.plan-section {
+    width: 85%;
+    max-width: 700px;
+
+    margin: 40px auto;
+
+    padding: 40px 35px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.plan-section h2 {
+    font-size: 28px;
+
+    color: #111827;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   PLAN FORM
+========================= */
+
+#planForm {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    background-color: transparent;
+
+    box-shadow: none;
+
+    border-radius: 0;
+}
+
+#planForm label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-weight: bold;
+}
+
+#planForm input,
+#planForm select,
+#planForm textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+}
+
+#planForm input:focus,
+#planForm select:focus,
+#planForm textarea:focus {
+    outline: none;
+
+    border-color: #38bdf8;
+}
+
+#planForm textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   PLAN BUTTONS
+========================= */
+
+.plan-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.plan-buttons button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.plan-buttons #sub {
+    background-color: #111827;
+
+    color: white;
+}
+
+.plan-buttons #sub:hover {
+    background-color: #38bdf8;
+
+    color: #111827;
+}
+
+.plan-buttons #reset {
+    background-color: #e5e7eb;
+
+    color: #111827;
+}
+
+.plan-buttons #reset:hover {
+    background-color: #ef4444;
+
+    color: white;
+}
+
+
+/* =========================
+   CREATED PLAN
+========================= */
+
+.created-plan {
+    width: 85%;
+    max-width: 700px;
+
+    margin: 40px auto 60px;
+
+    padding: 35px;
+
+    background-color: #111827;
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    display: none;
+}
+
+.created-plan h2 {
+    margin-bottom: 20px;
+}
+
+#planResult {
+    line-height: 1.8;
+}
+
+#planResult h3 {
+    margin-bottom: 15px;
+}
+
+#planResult p {
+    margin-bottom: 7px;
+}
+/* =========================
+   LOGIN HEADER
+========================= */
+
+.login-header {
+    width: 85%;
+
+    margin: 50px auto 30px;
+
+    padding: 45px 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.login-header h1 {
+    font-size: 36px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.login-header p {
+    font-size: 18px;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   LOGIN SECTION
+========================= */
+
+.login-section {
+    width: 85%;
+
+    max-width: 500px;
+
+    margin: 40px auto 70px;
+}
+
+
+/* =========================
+   LOGIN FORM
+========================= */
+
+#loginForm {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#loginForm h2 {
+    font-size: 28px;
+
+    color: #111827;
+
+    margin-bottom: 30px;
+}
+
+#loginForm label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #111827;
+}
+
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+#loginForm input:focus {
+    outline: none;
+
+    border-color: #38bdf8;
+}
+
+
+/* =========================
+   REMEMBER ME
+========================= */
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.remember input {
+    width: auto;
+
+    margin: 0;
+}
+
+.remember label {
+    margin: 0;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+#loginBtn {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #111827;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#loginBtn:hover {
+    background-color: #38bdf8;
+
+    color: #111827;
+}
+
+
+/* =========================
+   LOGIN MESSAGE
+========================= */
+
+#loginMessage {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+/* =========================
+   VIBEFIND OPTIONS
+========================= */
+
+.option {
+    padding: 12px 20px;
+    margin: 8px;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+
+    background-color: #f4f7fb;
+    color: #111827;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+
+/* SELECTED OPTION */
+
+.option.selected {
+    background-color: #111827;
+    color: white;
+
+    border-color: #38bdf8;
+
+    transform: scale(1.05);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

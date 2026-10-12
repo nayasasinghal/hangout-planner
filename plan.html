@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Create Plan</title>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav>
+        <a href="index.html">HOME</a> |
+        <a href="vibefind.html">VIBEFIND</a> |
+        <a href="explore.html">EXPLORE</a> |
+        <a href="fav.html">FAVOURITES</a> |
+              <a href="login.html">LOGIN</a>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="plan-header">
+
+        <h1>✨ CREATE YOUR PLAN</h1>
+
+        <p>
+            Plan your perfect hangout with your friends.
+        </p>
+
+    </section>
+
+
+    <!-- PLAN FORM -->
+
+    <section class="plan-section">
+
+        <h2>PLAN YOUR HANGOUT</h2>
+
+        <form id="planForm">
+
+            <!-- PLAN NAME -->
+
+            <label for="planName">
+                Plan Name
+            </label>
+
+            <input
+                type="text"
+                id="planName"
+                placeholder="Example: Saturday Hangout"
+                required
+            >
+
+
+            <!-- PLACE -->
+
+            <label for="planPlace">
+                Place
+            </label>
+
+            <input
+                type="text"
+                id="planPlace"
+                placeholder="Enter the place"
+                required
+            >
+
+
+            <!-- DATE -->
+
+            <label for="planDate">
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="planDate"
+                required
+            >
+
+
+            <!-- TIME -->
+
+            <label for="planTime">
+                Time
+            </label>
+
+            <input
+                type="time"
+                id="planTime"
+                required
+            >
+
+
+            <!-- PEOPLE -->
+
+            <label for="people">
+                Number of People
+            </label>
+
+            <input
+                type="number"
+                id="people"
+                min="1"
+                placeholder="Example: 4"
+                required
+            >
+
+
+            <!-- BUDGET -->
+
+            <label for="planBudget">
+                Budget Per Person
+            </label>
+
+            <select id="planBudget" required>
+
+                <option value="">
+                    Select Budget
+                </option>
+
+                <option value="Under ₹300">
+                    Under ₹300
+                </option>
+
+                <option value="₹300 - ₹700">
+                    ₹300 - ₹700
+                </option>
+
+                <option value="₹700 - ₹1500">
+                    ₹700 - ₹1500
+                </option>
+
+                <option value="₹1500+">
+                    ₹1500+
+                </option>
+
+            </select>
+
+
+            <!-- NOTES -->
+
+            <label for="notes">
+                Notes
+            </label>
+
+            <textarea
+                id="notes"
+                placeholder="Add anything you need to remember..."
+                rows="4"
+            ></textarea>
+
+
+            <!-- BUTTONS -->
+
+            <div class="plan-buttons">
+
+                <button type="submit" id="sub">
+                    ✨ CREATE PLAN
+                </button>
+
+                <button type="reset" id="reset">
+                    RESET
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- CREATED PLAN -->
+
+    <section
+        class="created-plan"
+        id="createdPlan"
+    >
+
+        <h2>YOUR PLAN</h2>
+
+        <div id="planResult">
+
+            <p>
+                Your created plan will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
