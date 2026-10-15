@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover trendy cafes, hangout spots, dining, arcades and plan hangouts with friends.">
     <link rel="stylesheet" href="style.css">
-    <title>Outsy - Hangout Finder & Vibe Planner</title>
+    <title>Outsy - Hangout Finder & Vibe Radar</title>
 </head>
 
-<body>
+<body class="azurio-theme">
 
     <!-- NAVIGATION BAR -->
-    <nav>
+    <nav class="azurio-nav">
         <a href="index.html" class="nav-brand">
-            <span>📍 OUTSY</span>
-            <span class="brand-badge">Hangout Finder</span>
+            <span class="pixel-brand-icon">⬡</span>
+            <span class="brand-text">OUTSY</span>
+            <span class="brand-badge">RADAR</span>
         </a>
 
         <div class="nav-links">
@@ -36,69 +37,188 @@
     </nav>
 
 
-    <!-- MAIN HERO SECTION -->
-    <section class="hero">
-        <div class="hero-pill">
-            <span>✨</span> The Ultimate Hangout & Vibe Finder
+    <!-- AZURIO THEMED HERO STAGE -->
+    <section class="azurio-hero-section">
+
+        <!-- Top Editorial Meta Row (matching template) -->
+        <div class="azurio-meta-top">
+            <div class="meta-item meta-brand">
+                <span class="pixel-emblem">🐱</span>
+                <div class="meta-brand-text">
+                    <strong>OUTSY</strong>
+                    <span>HANGOUT RADAR</span>
+                </div>
+            </div>
+
+            <div class="meta-item meta-center-tag">
+                <span>CURATED SPOTS, TECH & SOME MAGIC</span>
+            </div>
+
+            <div class="meta-item meta-tech-stack">
+                <span>REAL.GPS</span>
+                <span>OSM.API</span>
+                <span>MAPS.NAV</span>
+                <span>PERSIST.DB</span>
+            </div>
         </div>
 
-        <h1>
-            Find the perfect place.<br>
-            Create the <span class="gradient-text">perfect vibe.</span>
-        </h1>
+        <!-- The Cosmic Stage: Celestial Planets + Huge Serif OUTSY + Billowing Blue Clouds with Sunset Gold Edges -->
+        <div class="azurio-stage">
 
-        <h2>Discover amazing spots, cafes, activities & experiences.</h2>
+            <!-- Top Emerging Planet Sphere -->
+            <div class="azurio-planet-top" aria-hidden="true"></div>
 
-        <p>
-            Whether it's cozy coffee corners, gaming arcades, rooftops, or late night bites — find your crew's next destination in seconds.
-        </p>
+            <!-- Floating 3D Red-Coral Celestial Moon -->
+            <div class="azurio-planet-moon" aria-hidden="true"></div>
 
-        <!-- Dynamic Hero Search Bar -->
-        <form class="hero-search-bar" action="explore.html" method="GET">
-            <span>🔍</span>
-            <input type="text" name="q" placeholder="Search cafes, rooftop lounges, arcades, parks..." autocomplete="off">
-            <button type="submit">Explore</button>
-        </form>
+            <!-- Large Center Celestial Planet Globe -->
+            <div class="azurio-planet-center" aria-hidden="true">
+                <div class="planet-inner-glow"></div>
+            </div>
 
-        <div class="hero-buttons">
-            <a href="explore.html" class="main-button">
-                🔍 Explore Places
-            </a>
+            <!-- Mega High-Contrast Serif Title: OUTSY -->
+            <div class="azurio-title-wrapper">
+                <h1 class="azurio-mega-title" aria-label="OUTSY">
+                    <span class="az-char az-char-o">O</span>
+                    <span class="az-char az-char-u">U</span>
+                    <span class="az-char az-char-t">T</span>
+                    <span class="az-char az-char-s">S</span>
+                    <span class="az-char az-char-y">Y</span>
+                </h1>
+            </div>
 
-            <a href="plan.html" class="main-button secondary">
-                ✨ Plan a Hangout
-            </a>
+            <!-- Billowing Blue Cumulus Clouds with Illuminated Golden Sunset Tops -->
+            <div class="azurio-clouds-deck" aria-hidden="true">
+                <svg class="clouds-svg" viewBox="0 0 1440 380" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Golden Sunset Sunlight Gradient -->
+                        <linearGradient id="cloudGold" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#fde047" stop-opacity="1"/>
+                            <stop offset="25%" stop-color="#f59e0b" stop-opacity="0.95"/>
+                            <stop offset="70%" stop-color="#ea580c" stop-opacity="0.6"/>
+                            <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+                        </linearGradient>
+
+                        <!-- Deep Cobalt Cloud Base Gradient -->
+                        <linearGradient id="cloudDeepBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#1d4ed8"/>
+                            <stop offset="35%" stop-color="#1e3a8a"/>
+                            <stop offset="70%" stop-color="#0f172a"/>
+                            <stop offset="100%" stop-color="#050508"/>
+                        </linearGradient>
+
+                        <!-- Front Cloud Billows Gradient -->
+                        <linearGradient id="cloudFrontBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#38bdf8"/>
+                            <stop offset="20%" stop-color="#2563eb"/>
+                            <stop offset="60%" stop-color="#1e40af"/>
+                            <stop offset="100%" stop-color="#050508"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Back Cloud Layer (Deep Ultramarine) -->
+                    <path class="cloud-layer-back" d="M0,220 C120,150 240,170 360,130 C470,100 580,110 680,150 C790,110 920,90 1040,140 C1160,100 1320,130 1440,190 L1440,380 L0,380 Z" fill="url(#cloudDeepBlue)"/>
+
+                    <!-- Golden Sunset Glow on Back Cloud Peaks -->
+                    <path d="M0,220 C120,150 240,170 360,130 C470,100 580,110 680,150 C790,110 920,90 1040,140 C1160,100 1320,130 1440,190 L1440,205 C1320,145 1160,115 1040,155 C920,105 790,125 680,165 C580,125 470,115 360,145 C240,185 120,165 0,235 Z" fill="url(#cloudGold)"/>
+
+                    <!-- Mid Cloud Cumulus Bumps -->
+                    <path class="cloud-layer-mid" d="M0,260 C90,220 180,210 280,240 C390,190 510,200 600,230 C710,180 830,190 940,220 C1060,170 1190,190 1300,230 C1380,200 1420,220 1440,240 L1440,380 L0,380 Z" fill="#1e3a8a" opacity="0.85"/>
+
+                    <!-- Front Billowing Cumulus Waves with Sunlit Gold Crests -->
+                    <path class="cloud-layer-front" d="M0,290 C70,240 150,230 240,260 C340,210 450,220 540,250 C640,200 760,210 870,240 C980,190 1110,210 1220,250 C1310,220 1390,240 1440,260 L1440,380 L0,380 Z" fill="url(#cloudFrontBlue)"/>
+
+                    <!-- Sunlit Gold Edges on Front Peaks -->
+                    <path d="M0,290 C70,240 150,230 240,260 C340,210 450,220 540,250 C640,200 760,210 870,240 C980,190 1110,210 1220,250 C1310,220 1390,240 1440,260 L1440,275 C1390,255 1310,235 1220,265 C1110,225 980,205 870,255 C760,225 640,215 540,265 C450,235 340,225 240,275 C150,245 70,255 0,305 Z" fill="url(#cloudGold)"/>
+                </svg>
+            </div>
+
+            <!-- Bottom Editorial Meta Row (matching template) -->
+            <div class="azurio-meta-bottom">
+                <div class="meta-bottom-left">
+                    <span>GEN-Z HANGOUT FINDER &</span>
+                    <strong>SQUAD EXPERIENCE RADAR</strong>
+                </div>
+
+                <div class="meta-bottom-right">
+                    <span class="meta-day-night">DAY ☀️ / NIGHT 🌙</span>
+                </div>
+            </div>
+
         </div>
+
+
+        <!-- Subheadline & Interactive Search Controls -->
+        <div class="azurio-interaction-dock">
+            <h2 class="azurio-subheadline">
+                Find the perfect place. <span class="gold-gradient-text">Create the perfect vibe.</span>
+            </h2>
+
+            <p class="azurio-lead-text">
+                Discover aesthetic cafes, rooftop lounges, neon arcades & scenic spots with real-time distance and Google Maps directions.
+            </p>
+
+            <!-- Search Bar in Azurio Dark Theme -->
+            <form class="azurio-search-bar" action="explore.html" method="GET">
+                <span class="search-icon-symbol">🔍</span>
+                <input type="text" name="q" placeholder="Search cafes, rooftop lounges, arcades, parks..." autocomplete="off">
+                <button type="submit" class="btn-azurio-submit">
+                    <span>EXPLORE</span>
+                    <span>→</span>
+                </button>
+            </form>
+
+            <!-- Floating Quick Vibe Chips -->
+            <div class="azurio-vibe-chips">
+                <a href="explore.html?category=cafe" class="az-chip">☕ Subko Roastery</a>
+                <a href="explore.html?category=gaming" class="az-chip">🎮 Neon Arcades</a>
+                <a href="explore.html?category=outdoors" class="az-chip">🌅 Sunset Points</a>
+                <a href="explore.html?category=food" class="az-chip">🍔 Artisan Bites</a>
+                <a href="explore.html?category=music" class="az-chip">🎵 Indie Gigs</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="azurio-buttons">
+                <a href="explore.html" class="azurio-main-btn primary">
+                    🚀 EXPLORE SPOTS
+                </a>
+
+                <a href="plan.html" class="azurio-main-btn secondary">
+                    ✨ CREATE A PLAN
+                </a>
+            </div>
+        </div>
+
     </section>
 
 
-    <!-- WHAT CAN YOU DO -->
-    <section class="features">
+    <!-- WHAT CAN YOU DO (DARK COSMIC CARDS) -->
+    <section class="features azurio-features">
         <span class="section-tagline">Why Outsy</span>
         <h2>WHAT CAN YOU DO?</h2>
 
         <div class="cards">
-            <div class="card">
+            <div class="card azurio-card">
                 <div class="card-icon">🔍</div>
                 <h3>EXPLORE</h3>
                 <p>
-                    Discover handpicked cafes, arcades, movies, and outdoor spots tailored to your budget and vibe.
+                    Discover handpicked cafes, arcades, movies, and outdoor spots tailored to your budget and vibe with live OpenStreetMap search.
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card azurio-card">
                 <div class="card-icon">❤️</div>
                 <h3>FAVOURITES</h3>
                 <p>
-                    Bookmark your go-to hangout places with persistent storage so your bucket list is always ready.
+                    Bookmark your go-to hangout places with permanent storage so your squad's wishlist is always ready.
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card azurio-card">
                 <div class="card-icon">📅</div>
                 <h3>PLANS</h3>
                 <p>
-                    Build customized hangout plans with date, time, budget per friend, directions, and instant sharing.
+                    Build customized hangout plans with date, time, budget per friend, Google Maps directions, and instant WhatsApp sharing.
                 </p>
             </div>
         </div>
@@ -106,36 +226,36 @@
 
 
     <!-- VIBE SECTION -->
-    <section class="vibes">
+    <section class="vibes azurio-vibes">
         <span class="section-tagline">Curated Spots</span>
         <h2>WHAT'S YOUR VIBE?</h2>
 
         <div class="vibe-container">
-            <a href="explore.html?category=food" class="vibe">
+            <a href="explore.html?category=food" class="vibe azurio-vibe-pill">
                 🍔 <span>FOOD</span>
             </a>
 
-            <a href="explore.html?category=cafe" class="vibe">
+            <a href="explore.html?category=cafe" class="vibe azurio-vibe-pill">
                 ☕ <span>CAFÉ</span>
             </a>
 
-            <a href="explore.html?category=movies" class="vibe">
+            <a href="explore.html?category=movies" class="vibe azurio-vibe-pill">
                 🎬 <span>MOVIES</span>
             </a>
 
-            <a href="explore.html?category=gaming" class="vibe">
+            <a href="explore.html?category=gaming" class="vibe azurio-vibe-pill">
                 🎮 <span>GAMING</span>
             </a>
 
-            <a href="explore.html?category=outdoors" class="vibe">
+            <a href="explore.html?category=outdoors" class="vibe azurio-vibe-pill">
                 🌳 <span>OUTDOORS</span>
             </a>
 
-            <a href="explore.html?category=shopping" class="vibe">
+            <a href="explore.html?category=shopping" class="vibe azurio-vibe-pill">
                 🛍️ <span>SHOPPING</span>
             </a>
 
-            <a href="explore.html?category=music" class="vibe">
+            <a href="explore.html?category=music" class="vibe azurio-vibe-pill">
                 🎵 <span>MUSIC</span>
             </a>
         </div>
@@ -143,11 +263,11 @@
 
 
     <!-- FINAL CALL TO ACTION -->
-    <section class="cta">
+    <section class="cta azurio-cta">
         <h2>Ready for your next hangout?</h2>
-        <p>Discover spots near you, check real-time distances, get Google Maps directions, and create unforgettable memories.</p>
-        <a href="explore.html" class="main-button">
-            🚀 START EXPLORING
+        <p>Discover spots near you, calculate real GPS distance, navigate turn-by-turn with Google Maps, and create unforgettable memories.</p>
+        <a href="explore.html" class="azurio-main-btn primary">
+            ⚡ START EXPLORING
         </a>
     </section>
 
