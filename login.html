@@ -1,115 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Sign in or register for Outsy to save your favourite spots and plans.">
     <link rel="stylesheet" href="style.css">
-
-    <title>Outsy - Login</title>
+    <title>Account - Outsy</title>
 </head>
 
 <body>
 
     <!-- NAVIGATION BAR -->
-
     <nav>
-        <a href="index.html">HOME</a> |
-        <a href="vibefind.html">VIBEFIND</a> |
-        <a href="explore.html">EXPLORE</a> |
-        <a href="fav.html">FAVOURITES</a> |
-        <a href="plan.html">CREATE PLANS</a> |
-            </nav>
+        <a href="index.html" class="nav-brand">
+            <span>📍 OUTSY</span>
+            <span class="brand-badge">Hangout Finder</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="vibefind.html">VIBEFIND</a>
+            <a href="explore.html">EXPLORE</a>
+            <a href="fav.html">
+                FAVOURITES <span class="nav-badge-count" id="navFavCount" style="display: none;">0</span>
+            </a>
+            <a href="plan.html">
+                PLANS <span class="nav-badge-count" id="navPlanCount" style="display: none;">0</span>
+            </a>
+        </div>
+
+        <div class="nav-auth" id="navAuthContainer">
+            <a href="login.html" class="btn-nav-login active">Sign In</a>
+        </div>
+    </nav>
 
 
     <!-- LOGIN HEADER -->
-
     <section class="login-header">
-
         <h1>👋 WELCOME TO OUTSY</h1>
-
-        <p>
-            Login to save your favourites and manage your plans.
-        </p>
-
+        <p>Log in or sign up to save your favourite places and keep your hangout plans synced.</p>
     </section>
 
 
-    <!-- LOGIN FORM -->
-
+    <!-- AUTH SECTION WITH TABS & FORGOT PASSWORD -->
     <section class="login-section">
 
-        <form id="loginForm">
+        <div class="auth-card">
 
-            <h2>LOGIN</h2>
-
-            <!-- EMAIL -->
-
-            <label for="email">
-                Email
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-            >
-
-
-            <!-- PASSWORD -->
-
-            <label for="password">
-                Password
-            </label>
-
-            <input
-                type="password"
-                id="password"
-                placeholder="Enter your password"
-                required
-            >
-
-
-            <!-- REMEMBER ME -->
-
-            <div class="remember">
-
-                <input
-                    type="checkbox"
-                    id="remember"
-                >
-
-                <label for="remember">
-                    Remember me
-                </label>
-
+            <!-- Tab Switcher -->
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab-btn active" id="tabLoginBtn" onclick="switchAuthTab('login')">
+                    Sign In
+                </button>
+                <button type="button" class="auth-tab-btn" id="tabSignupBtn" onclick="switchAuthTab('signup')">
+                    Create Account
+                </button>
             </div>
 
 
-            <!-- LOGIN BUTTON -->
+            <!-- 1. SIGN IN FORM -->
+            <form id="loginForm">
+                <div class="auth-field">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="e.g. alex@example.com"
+                        required
+                    >
+                </div>
 
-            <button type="submit" id="loginBtn">
-                LOGIN
-            </button>
+                <div class="auth-field">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••"
+                        required
+                    >
+                </div>
+
+                <div class="auth-helper-row">
+                    <label class="remember" for="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+                    <button type="button" class="link-forgot" onclick="switchAuthTab('forgot')">
+                        Forgot Password?
+                    </button>
+                </div>
+
+                <button type="submit" id="loginBtn" class="btn-auth-submit">
+                    Sign In
+                </button>
+
+                <p id="loginMessage"></p>
+                <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px;">
+                    💡 Quick Demo: <strong>demo@outsy.com</strong> / <strong>password123</strong>
+                </p>
+            </form>
 
 
-            <!-- MESSAGE -->
+            <!-- 2. CREATE ACCOUNT FORM (SIGN UP) -->
+            <form id="signupForm" style="display: none;">
+                <div class="auth-field">
+                    <label for="signupName">Full Name / Nickname</label>
+                    <input
+                        type="text"
+                        id="signupName"
+                        placeholder="e.g. Alex Rivera"
+                        required
+                    >
+                </div>
 
-            <p id="loginMessage"></p>
+                <div class="auth-field">
+                    <label for="signupEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="e.g. alex@example.com"
+                        required
+                    >
+                </div>
 
-        </form>
+                <div class="auth-field">
+                    <label for="signupPassword">Create Password</label>
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="At least 6 characters"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="signupBtn" class="btn-auth-submit">
+                    Create Account
+                </button>
+
+                <p id="signupMessage" style="margin-top: 16px; font-size: 13px; font-weight: 600; text-align: center;"></p>
+            </form>
+
+
+            <!-- 3. FORGOT PASSWORD FORM -->
+            <form id="forgotForm" style="display: none;">
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; margin-bottom: 6px;">Reset Password</h3>
+                    <p style="font-size: 13px; color: var(--text-muted);">Enter your registered email and choose a new password.</p>
+                </div>
+
+                <div class="auth-field">
+                    <label for="forgotEmail">Registered Email</label>
+                    <input
+                        type="email"
+                        id="forgotEmail"
+                        placeholder="e.g. demo@outsy.com"
+                        required
+                    >
+                </div>
+
+                <div class="auth-field">
+                    <label for="forgotNewPassword">New Password</label>
+                    <input
+                        type="password"
+                        id="forgotNewPassword"
+                        placeholder="Enter your new password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="forgotBtn" class="btn-auth-submit">
+                    Update Password
+                </button>
+
+                <div style="text-align: center; margin-top: 16px;">
+                    <button type="button" class="link-forgot" onclick="switchAuthTab('login')">
+                        ← Back to Sign In
+                    </button>
+                </div>
+
+                <p id="forgotMessage" style="margin-top: 16px; font-size: 13px; font-weight: 600; text-align: center;"></p>
+            </form>
+
+        </div>
 
     </section>
 
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
-```
-
-### Add this to `style.css`

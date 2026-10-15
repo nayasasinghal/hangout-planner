@@ -4,65 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover trendy cafes, hangout spots, dining, arcades and plan hangouts with friends.">
     <link rel="stylesheet" href="style.css">
-    <title>Hangout Finder</title>
+    <title>Outsy - Hangout Finder & Vibe Planner</title>
 </head>
 
 <body>
 
     <!-- NAVIGATION BAR -->
-
     <nav>
-        <a href="vibefind.html">VIBEFIND</a> |
-        <a href="explore.html">EXPLORE</a> |
-        <a href="fav.html">FAVOURITES</a> |
-        <a href="plan.html">CREATE PLANS</a> |
-        <a href="login.html">LOGIN</a>
-    </nav>
+        <a href="index.html" class="nav-brand">
+            <span>📍 OUTSY</span>
+            <span class="brand-badge">Hangout Finder</span>
+        </a>
 
-
-    <!-- MAIN HEADING -->
-
-    <section class="hero">
-
-        <h1>📍OUTSY HANGOUT FINDER</h1>
-
-        <h2>Find the perfect place.<br>
-            Create the perfect vibe.</h2>
-
-        <p>
-            Discover amazing places, activities and experiences
-            <br>
-            for your next hangout.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="explore.html" class="main-button">
-                🔍 EXPLORE PLACES
+        <div class="nav-links">
+            <a href="index.html" class="active">HOME</a>
+            <a href="vibefind.html">VIBEFIND</a>
+            <a href="explore.html">EXPLORE</a>
+            <a href="fav.html">
+                FAVOURITES <span class="nav-badge-count" id="navFavCount" style="display: none;">0</span>
             </a>
-
-            <a href="plan.html" class="main-button">
-                ✨ CREATE A PLAN
+            <a href="plan.html">
+                PLANS <span class="nav-badge-count" id="navPlanCount" style="display: none;">0</span>
             </a>
         </div>
 
+        <div class="nav-auth" id="navAuthContainer">
+            <a href="login.html" class="btn-nav-login">Sign In</a>
+        </div>
+    </nav>
+
+
+    <!-- MAIN HERO SECTION -->
+    <section class="hero">
+        <div class="hero-pill">
+            <span>✨</span> The Ultimate Hangout & Vibe Finder
+        </div>
+
+        <h1>
+            Find the perfect place.<br>
+            Create the <span class="gradient-text">perfect vibe.</span>
+        </h1>
+
+        <h2>Discover amazing spots, cafes, activities & experiences.</h2>
+
+        <p>
+            Whether it's cozy coffee corners, gaming arcades, rooftops, or late night bites — find your crew's next destination in seconds.
+        </p>
+
+        <!-- Dynamic Hero Search Bar -->
+        <form class="hero-search-bar" action="explore.html" method="GET">
+            <span>🔍</span>
+            <input type="text" name="q" placeholder="Search cafes, rooftop lounges, arcades, parks..." autocomplete="off">
+            <button type="submit">Explore</button>
+        </form>
+
+        <div class="hero-buttons">
+            <a href="explore.html" class="main-button">
+                🔍 Explore Places
+            </a>
+
+            <a href="plan.html" class="main-button secondary">
+                ✨ Plan a Hangout
+            </a>
+        </div>
     </section>
 
 
     <!-- WHAT CAN YOU DO -->
-
     <section class="features">
-
+        <span class="section-tagline">Why Outsy</span>
         <h2>WHAT CAN YOU DO?</h2>
 
         <div class="cards">
-
             <div class="card">
                 <div class="card-icon">🔍</div>
                 <h3>EXPLORE</h3>
                 <p>
-                    Find places based on your interests,
-                    budget and vibe.
+                    Discover handpicked cafes, arcades, movies, and outdoor spots tailored to your budget and vibe.
                 </p>
             </div>
 
@@ -70,8 +90,7 @@
                 <div class="card-icon">❤️</div>
                 <h3>FAVOURITES</h3>
                 <p>
-                    Save your favourite places
-                    for later.
+                    Bookmark your go-to hangout places with persistent storage so your bucket list is always ready.
                 </p>
             </div>
 
@@ -79,77 +98,63 @@
                 <div class="card-icon">📅</div>
                 <h3>PLANS</h3>
                 <p>
-                    Create your own hangout plan
-                    with friends.
+                    Build customized hangout plans with date, time, budget per friend, directions, and instant sharing.
                 </p>
             </div>
-
         </div>
-
     </section>
 
 
     <!-- VIBE SECTION -->
-
     <section class="vibes">
-
+        <span class="section-tagline">Curated Spots</span>
         <h2>WHAT'S YOUR VIBE?</h2>
 
         <div class="vibe-container">
-
-            <a href="explore.html" class="vibe">
-                🍔
-                <span>FOOD</span>
+            <a href="explore.html?category=food" class="vibe">
+                🍔 <span>FOOD</span>
             </a>
 
-            <a href="explore.html" class="vibe">
-                ☕
-                <span>CAFÉ</span>
+            <a href="explore.html?category=cafe" class="vibe">
+                ☕ <span>CAFÉ</span>
             </a>
 
-            <a href="explore.html" class="vibe">
-                🎬
-                <span>MOVIES</span>
+            <a href="explore.html?category=movies" class="vibe">
+                🎬 <span>MOVIES</span>
             </a>
 
-            <a href="explore.html" class="vibe">
-                🎮
-                <span>GAMING</span>
+            <a href="explore.html?category=gaming" class="vibe">
+                🎮 <span>GAMING</span>
             </a>
 
-            <a href="explore.html" class="vibe">
-                🌳
-                <span>OUTDOORS</span>
+            <a href="explore.html?category=outdoors" class="vibe">
+                🌳 <span>OUTDOORS</span>
             </a>
 
-            <a href="explore.html" class="vibe">
-                🛍️
-                <span>SHOPPING</span>
+            <a href="explore.html?category=shopping" class="vibe">
+                🛍️ <span>SHOPPING</span>
             </a>
 
-            <a href="explore.html" class="vibe">
-                🎵
-                <span>MUSIC</span>
+            <a href="explore.html?category=music" class="vibe">
+                🎵 <span>MUSIC</span>
             </a>
-
         </div>
-
     </section>
 
 
     <!-- FINAL CALL TO ACTION -->
-
     <section class="cta">
-
         <h2>Ready for your next hangout?</h2>
-
+        <p>Discover spots near you, check real-time distances, get Google Maps directions, and create unforgettable memories.</p>
         <a href="explore.html" class="main-button">
-            START EXPLORING
+            🚀 START EXPLORING
         </a>
-
     </section>
 
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

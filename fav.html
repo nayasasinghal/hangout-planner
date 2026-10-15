@@ -1,76 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Your saved favourite hangout places and bucket list.">
     <link rel="stylesheet" href="style.css">
-
-    <title>Favourites</title>
+    <title>Favourites - Outsy</title>
 </head>
 
 <body>
 
     <!-- NAVIGATION BAR -->
-
     <nav>
-        <a href="index.html">HOME</a> |
-        <a href="vibefind.html">VIBEFIND</a> |
-        <a href="explore.html">EXPLORE</a> |
-                <a href="plan.html">CREATE PLANS</a> |
-        <a href="login.html">LOGIN</a>
+        <a href="index.html" class="nav-brand">
+            <span>📍 OUTSY</span>
+            <span class="brand-badge">Hangout Finder</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="vibefind.html">VIBEFIND</a>
+            <a href="explore.html">EXPLORE</a>
+            <a href="fav.html" class="active">
+                FAVOURITES <span class="nav-badge-count" id="navFavCount" style="display: none;">0</span>
+            </a>
+            <a href="plan.html">
+                PLANS <span class="nav-badge-count" id="navPlanCount" style="display: none;">0</span>
+            </a>
+        </div>
+
+        <div class="nav-auth" id="navAuthContainer">
+            <a href="login.html" class="btn-nav-login">Sign In</a>
+        </div>
     </nav>
 
 
     <!-- PAGE HEADER -->
-
     <section class="fav-header">
-
-        <h1>❤️ FAVOURITES</h1>
-
-        <p>
-            Your favourite hangout places, all in one place.
-        </p>
-
+        <h1>❤️ SAVED FAVOURITES</h1>
+        <p>Your curated hangout wishlist with instant directions and details.</p>
     </section>
 
 
     <!-- FAVOURITE PLACES -->
-
     <section class="fav-section">
-
-        <h2>SAVED PLACES</h2>
-
         <div class="fav-container" id="favContainer">
-
-            <!-- Favourite places will appear here -->
-
+            <!-- Favourites will be loaded dynamically from localStorage -->
             <div class="empty-fav">
-
                 <div class="empty-icon">💔</div>
-
                 <h3>No favourites yet!</h3>
-
                 <p>
-                    Explore some places and add your favourites
-                    to see them here.
+                    Explore trending cafes, rooftops, and gaming spots, then tap the heart icon to save them here.
                 </p>
-
                 <a href="explore.html" class="main-button">
                     🔍 EXPLORE PLACES
                 </a>
-
             </div>
-
         </div>
-
     </section>
 
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>

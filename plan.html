@@ -1,204 +1,162 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Plan your group hangouts, budget, date, and get instant maps directions.">
     <link rel="stylesheet" href="style.css">
-
-    <title>Create Plan</title>
+    <title>Create Hangout Plan - Outsy</title>
 </head>
 
 <body>
 
     <!-- NAVIGATION BAR -->
-
     <nav>
-        <a href="index.html">HOME</a> |
-        <a href="vibefind.html">VIBEFIND</a> |
-        <a href="explore.html">EXPLORE</a> |
-        <a href="fav.html">FAVOURITES</a> |
-              <a href="login.html">LOGIN</a>
+        <a href="index.html" class="nav-brand">
+            <span>📍 OUTSY</span>
+            <span class="brand-badge">Hangout Finder</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="vibefind.html">VIBEFIND</a>
+            <a href="explore.html">EXPLORE</a>
+            <a href="fav.html">
+                FAVOURITES <span class="nav-badge-count" id="navFavCount" style="display: none;">0</span>
+            </a>
+            <a href="plan.html" class="active">
+                PLANS <span class="nav-badge-count" id="navPlanCount" style="display: none;">0</span>
+            </a>
+        </div>
+
+        <div class="nav-auth" id="navAuthContainer">
+            <a href="login.html" class="btn-nav-login">Sign In</a>
+        </div>
     </nav>
 
 
     <!-- PAGE HEADER -->
-
     <section class="plan-header">
-
-        <h1>✨ CREATE YOUR PLAN</h1>
-
-        <p>
-            Plan your perfect hangout with your friends.
-        </p>
-
+        <h1>✨ HANGOUT PLANNER</h1>
+        <p>Coordinate dates, budgets, and spots with your squad with persistent local storage.</p>
     </section>
 
 
-    <!-- PLAN FORM -->
+    <!-- SPLIT PLANNER LAYOUT -->
+    <div class="planner-layout">
 
-    <section class="plan-section">
+        <!-- PLAN FORM (LEFT) -->
+        <section class="plan-section">
+            <h2>📅 CREATE A NEW PLAN</h2>
 
-        <h2>PLAN YOUR HANGOUT</h2>
+            <form id="planForm">
+                <div class="form-group">
+                    <label for="planName">Plan Title</label>
+                    <input
+                        type="text"
+                        id="planName"
+                        placeholder="e.g. Saturday Coffee & Board Games"
+                        required
+                    >
+                </div>
 
-        <form id="planForm">
+                <div class="form-group">
+                    <label for="planPlace">Hangout Spot / Location</label>
+                    <input
+                        type="text"
+                        id="planPlace"
+                        placeholder="e.g. Subko Bandra, PVR Powai, GameZone"
+                        required
+                    >
+                </div>
 
-            <!-- PLAN NAME -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="planDate">Date</label>
+                        <input
+                            type="date"
+                            id="planDate"
+                            required
+                        >
+                    </div>
 
-            <label for="planName">
-                Plan Name
-            </label>
+                    <div class="form-group">
+                        <label for="planTime">Time</label>
+                        <input
+                            type="time"
+                            id="planTime"
+                            required
+                        >
+                    </div>
+                </div>
 
-            <input
-                type="text"
-                id="planName"
-                placeholder="Example: Saturday Hangout"
-                required
-            >
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="people">Number of Friends</label>
+                        <input
+                            type="number"
+                            id="people"
+                            min="1"
+                            max="50"
+                            placeholder="e.g. 4"
+                            required
+                        >
+                    </div>
 
+                    <div class="form-group">
+                        <label for="planBudget">Budget Per Person</label>
+                        <select id="planBudget" required>
+                            <option value="">Select Budget</option>
+                            <option value="Under ₹300">Under ₹300 (Chill & Budget)</option>
+                            <option value="₹300 - ₹700">₹300 - ₹700 (Cafes & Casuals)</option>
+                            <option value="₹700 - ₹1500">₹700 - ₹1500 (Dine-in & Gaming)</option>
+                            <option value="₹1500+">₹1500+ (Premium Rooftops & Gigs)</option>
+                        </select>
+                    </div>
+                </div>
 
-            <!-- PLACE -->
+                <div class="form-group">
+                    <label for="notes">Notes / Reminders</label>
+                    <textarea
+                        id="notes"
+                        placeholder="e.g. Bring Uno cards, meet directly by 5 PM, book table in advance..."
+                        rows="3"
+                    ></textarea>
+                </div>
 
-            <label for="planPlace">
-                Place
-            </label>
-
-            <input
-                type="text"
-                id="planPlace"
-                placeholder="Enter the place"
-                required
-            >
-
-
-            <!-- DATE -->
-
-            <label for="planDate">
-                Date
-            </label>
-
-            <input
-                type="date"
-                id="planDate"
-                required
-            >
-
-
-            <!-- TIME -->
-
-            <label for="planTime">
-                Time
-            </label>
-
-            <input
-                type="time"
-                id="planTime"
-                required
-            >
-
-
-            <!-- PEOPLE -->
-
-            <label for="people">
-                Number of People
-            </label>
-
-            <input
-                type="number"
-                id="people"
-                min="1"
-                placeholder="Example: 4"
-                required
-            >
-
-
-            <!-- BUDGET -->
-
-            <label for="planBudget">
-                Budget Per Person
-            </label>
-
-            <select id="planBudget" required>
-
-                <option value="">
-                    Select Budget
-                </option>
-
-                <option value="Under ₹300">
-                    Under ₹300
-                </option>
-
-                <option value="₹300 - ₹700">
-                    ₹300 - ₹700
-                </option>
-
-                <option value="₹700 - ₹1500">
-                    ₹700 - ₹1500
-                </option>
-
-                <option value="₹1500+">
-                    ₹1500+
-                </option>
-
-            </select>
+                <div class="plan-buttons">
+                    <button type="submit" id="sub">
+                        ✨ Save Plan
+                    </button>
+                    <button type="reset" id="reset">
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </section>
 
 
-            <!-- NOTES -->
+        <!-- SAVED PLANS LIST (RIGHT) -->
+        <section class="created-plan" id="createdPlan">
+            <h2>📋 YOUR SAVED PLANS</h2>
 
-            <label for="notes">
-                Notes
-            </label>
-
-            <textarea
-                id="notes"
-                placeholder="Add anything you need to remember..."
-                rows="4"
-            ></textarea>
-
-
-            <!-- BUTTONS -->
-
-            <div class="plan-buttons">
-
-                <button type="submit" id="sub">
-                    ✨ CREATE PLAN
-                </button>
-
-                <button type="reset" id="reset">
-                    RESET
-                </button>
-
+            <div id="planResult">
+                <!-- Saved plans rendered dynamically from localStorage by script.js -->
+                <div class="empty-fav">
+                    <div class="empty-icon">📅</div>
+                    <h3>No plans saved yet!</h3>
+                    <p>Fill out the details on the left to schedule your next hangout.</p>
+                </div>
             </div>
+        </section>
 
-        </form>
+    </div>
 
-    </section>
-
-
-    <!-- CREATED PLAN -->
-
-    <section
-        class="created-plan"
-        id="createdPlan"
-    >
-
-        <h2>YOUR PLAN</h2>
-
-        <div id="planResult">
-
-            <p>
-                Your created plan will appear here.
-            </p>
-
-        </div>
-
-    </section>
-
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
